@@ -1,1 +1,4 @@
-FROM nginx:alpineCOPY nginx.conf /etc/nginx/nginx.confEXPOSE 10000CMD ["nginx", "-g", "daemon off;"]
+FROM nginx:alpine
+COPY nginx.conf /etc/nginx/nginx.conf
+EXPOSE 10000
+CMD ["nginx", "-g", "daemon off;"]
